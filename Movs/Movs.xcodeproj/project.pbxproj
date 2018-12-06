@@ -22,6 +22,7 @@
 		0333218321B95040005D524F /* UpComingMovieListMoyaGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218221B95040005D524F /* UpComingMovieListMoyaGateway.swift */; };
 		0333218621B9512A005D524F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218521B9512A005D524F /* Movie.swift */; };
 		0333218921B958B5005D524F /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218821B958B5005D524F /* DefaultView.swift */; };
+		0333218D21B989E4005D524F /* Moya+requestDecodable.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218C21B989E4005D524F /* Moya+requestDecodable.swift */; };
 		237C1FA21F9929232CB656CC /* Pods_Movs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4C3A2CB7EA39CE59E52269 /* Pods_Movs.framework */; };
 		C05FC2574D3B7BF721C34306 /* Pods_MovsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160B08D6E5528BAFA030A3B2 /* Pods_MovsTests.framework */; };
 /* End PBXBuildFile section */
@@ -65,6 +66,7 @@
 		0333218221B95040005D524F /* UpComingMovieListMoyaGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieListMoyaGateway.swift; sourceTree = "<group>"; };
 		0333218521B9512A005D524F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
 		0333218821B958B5005D524F /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
+		0333218C21B989E4005D524F /* Moya+requestDecodable.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Moya+requestDecodable.swift"; sourceTree = "<group>"; };
 		160B08D6E5528BAFA030A3B2 /* Pods_MovsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FEF9AF504B55000D7D70B9 /* Pods-Movs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movs/Pods-Movs.debug.xcconfig"; sourceTree = "<group>"; };
 		7D3EA5FA289C86809FA70366 /* Pods-Movs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movs/Pods-Movs.release.xcconfig"; sourceTree = "<group>"; };
@@ -125,6 +127,8 @@
 		0333213E21B8AD1E005D524F /* Movs */ = {
 			isa = PBXGroup;
 			children = (
+				0333218B21B98687005D524F /* Extensions */,
+				0333218A21B98680005D524F /* New Group */,
 				0333217421B94198005D524F /* TheMovieDBAPI */,
 				0333217121B940EB005D524F /* Constants */,
 				0333218421B950D1005D524F /* Entities */,
@@ -239,6 +243,21 @@
 				0333218821B958B5005D524F /* DefaultView.swift */,
 			);
 			name = ViewCode;
+			sourceTree = "<group>";
+		};
+		0333218A21B98680005D524F /* New Group */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "New Group";
+			sourceTree = "<group>";
+		};
+		0333218B21B98687005D524F /* Extensions */ = {
+			isa = PBXGroup;
+			children = (
+				0333218C21B989E4005D524F /* Moya+requestDecodable.swift */,
+			);
+			name = Extensions;
 			sourceTree = "<group>";
 		};
 		3A39E640CCEA0BF1D940D71A /* Pods */ = {
@@ -501,6 +520,7 @@
 				0333218621B9512A005D524F /* Movie.swift in Sources */,
 				0333217321B94132005D524F /* AppConstants.swift in Sources */,
 				0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */,
+				0333218D21B989E4005D524F /* Moya+requestDecodable.swift in Sources */,
 				0333217621B94208005D524F /* APISettings.swift in Sources */,
 				0333218921B958B5005D524F /* DefaultView.swift in Sources */,
 				0333218121B94C8E005D524F /* Result.swift in Sources */,
