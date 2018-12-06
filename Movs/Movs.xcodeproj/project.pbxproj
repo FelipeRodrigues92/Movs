@@ -16,9 +16,12 @@
 		0333217321B94132005D524F /* AppConstants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333217221B94132005D524F /* AppConstants.swift */; };
 		0333217621B94208005D524F /* APISettings.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333217521B94208005D524F /* APISettings.swift */; };
 		0333217921B942E6005D524F /* UpComingMovieTarget.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333217821B942E6005D524F /* UpComingMovieTarget.swift */; };
-		0333217B21B94A94005D524F /* CodeView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333217A21B94A94005D524F /* CodeView.swift */; };
+		0333217B21B94A94005D524F /* ViewCode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333217A21B94A94005D524F /* ViewCode.swift */; };
 		0333217E21B94C26005D524F /* UpComingMovieListGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333217D21B94C26005D524F /* UpComingMovieListGateway.swift */; };
 		0333218121B94C8E005D524F /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218021B94C8E005D524F /* Result.swift */; };
+		0333218321B95040005D524F /* UpComingMovieListMoyaGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218221B95040005D524F /* UpComingMovieListMoyaGateway.swift */; };
+		0333218621B9512A005D524F /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218521B9512A005D524F /* Movie.swift */; };
+		0333218921B958B5005D524F /* DefaultView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333218821B958B5005D524F /* DefaultView.swift */; };
 		237C1FA21F9929232CB656CC /* Pods_Movs.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 7D4C3A2CB7EA39CE59E52269 /* Pods_Movs.framework */; };
 		C05FC2574D3B7BF721C34306 /* Pods_MovsTests.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 160B08D6E5528BAFA030A3B2 /* Pods_MovsTests.framework */; };
 /* End PBXBuildFile section */
@@ -56,9 +59,12 @@
 		0333217221B94132005D524F /* AppConstants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppConstants.swift; sourceTree = "<group>"; };
 		0333217521B94208005D524F /* APISettings.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = APISettings.swift; sourceTree = "<group>"; };
 		0333217821B942E6005D524F /* UpComingMovieTarget.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieTarget.swift; sourceTree = "<group>"; };
-		0333217A21B94A94005D524F /* CodeView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CodeView.swift; sourceTree = "<group>"; };
+		0333217A21B94A94005D524F /* ViewCode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewCode.swift; sourceTree = "<group>"; };
 		0333217D21B94C26005D524F /* UpComingMovieListGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieListGateway.swift; sourceTree = "<group>"; };
 		0333218021B94C8E005D524F /* Result.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Result.swift; sourceTree = "<group>"; };
+		0333218221B95040005D524F /* UpComingMovieListMoyaGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieListMoyaGateway.swift; sourceTree = "<group>"; };
+		0333218521B9512A005D524F /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		0333218821B958B5005D524F /* DefaultView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DefaultView.swift; sourceTree = "<group>"; };
 		160B08D6E5528BAFA030A3B2 /* Pods_MovsTests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_MovsTests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		44FEF9AF504B55000D7D70B9 /* Pods-Movs.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.debug.xcconfig"; path = "Pods/Target Support Files/Pods-Movs/Pods-Movs.debug.xcconfig"; sourceTree = "<group>"; };
 		7D3EA5FA289C86809FA70366 /* Pods-Movs.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-Movs.release.xcconfig"; path = "Pods/Target Support Files/Pods-Movs/Pods-Movs.release.xcconfig"; sourceTree = "<group>"; };
@@ -152,6 +158,7 @@
 		0333216D21B9389B005D524F /* Workers */ = {
 			isa = PBXGroup;
 			children = (
+				0333218421B950D1005D524F /* Entities */,
 				0333217F21B94C7E005D524F /* Communs */,
 				0333217C21B94BE1005D524F /* UpComingMovieList */,
 				0333216E21B93BA8005D524F /* Communs */,
@@ -162,7 +169,7 @@
 		0333216E21B93BA8005D524F /* Communs */ = {
 			isa = PBXGroup;
 			children = (
-				0333216F21B93BB7005D524F /* Protocols */,
+				0333218721B9586C005D524F /* ViewCode */,
 			);
 			name = Communs;
 			sourceTree = "<group>";
@@ -170,7 +177,7 @@
 		0333216F21B93BB7005D524F /* Protocols */ = {
 			isa = PBXGroup;
 			children = (
-				0333217A21B94A94005D524F /* CodeView.swift */,
+				0333217A21B94A94005D524F /* ViewCode.swift */,
 			);
 			name = Protocols;
 			sourceTree = "<group>";
@@ -204,6 +211,7 @@
 			isa = PBXGroup;
 			children = (
 				0333217D21B94C26005D524F /* UpComingMovieListGateway.swift */,
+				0333218221B95040005D524F /* UpComingMovieListMoyaGateway.swift */,
 			);
 			name = UpComingMovieList;
 			sourceTree = "<group>";
@@ -214,6 +222,23 @@
 				0333218021B94C8E005D524F /* Result.swift */,
 			);
 			name = Communs;
+			sourceTree = "<group>";
+		};
+		0333218421B950D1005D524F /* Entities */ = {
+			isa = PBXGroup;
+			children = (
+				0333218521B9512A005D524F /* Movie.swift */,
+			);
+			name = Entities;
+			sourceTree = "<group>";
+		};
+		0333218721B9586C005D524F /* ViewCode */ = {
+			isa = PBXGroup;
+			children = (
+				0333216F21B93BB7005D524F /* Protocols */,
+				0333218821B958B5005D524F /* DefaultView.swift */,
+			);
+			name = ViewCode;
 			sourceTree = "<group>";
 		};
 		3A39E640CCEA0BF1D940D71A /* Pods */ = {
@@ -472,11 +497,14 @@
 				0333217921B942E6005D524F /* UpComingMovieTarget.swift in Sources */,
 				0333217E21B94C26005D524F /* UpComingMovieListGateway.swift in Sources */,
 				0333214221B8AD1E005D524F /* ViewController.swift in Sources */,
+				0333218321B95040005D524F /* UpComingMovieListMoyaGateway.swift in Sources */,
+				0333218621B9512A005D524F /* Movie.swift in Sources */,
 				0333217321B94132005D524F /* AppConstants.swift in Sources */,
 				0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */,
 				0333217621B94208005D524F /* APISettings.swift in Sources */,
+				0333218921B958B5005D524F /* DefaultView.swift in Sources */,
 				0333218121B94C8E005D524F /* Result.swift in Sources */,
-				0333217B21B94A94005D524F /* CodeView.swift in Sources */,
+				0333217B21B94A94005D524F /* ViewCode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

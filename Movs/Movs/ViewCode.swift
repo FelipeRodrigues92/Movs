@@ -8,13 +8,13 @@
 
 import Foundation
 
-protocol CodeView {
+protocol ViewCode {
     func buildViewHierarchy()
     func setupConstraints()
     func setupAdditionalConfigurations()
     func setupView()
 }
-extension CodeView{
+extension ViewCode{
     func setupView(){
         buildViewHierarchy()
         setupConstraints()
