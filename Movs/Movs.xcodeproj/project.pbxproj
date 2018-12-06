@@ -127,6 +127,7 @@
 			children = (
 				0333217421B94198005D524F /* TheMovieDBAPI */,
 				0333217121B940EB005D524F /* Constants */,
+				0333218421B950D1005D524F /* Entities */,
 				0333216D21B9389B005D524F /* Workers */,
 				0333213F21B8AD1E005D524F /* AppDelegate.swift */,
 				0333214121B8AD1E005D524F /* ViewController.swift */,
@@ -158,7 +159,6 @@
 		0333216D21B9389B005D524F /* Workers */ = {
 			isa = PBXGroup;
 			children = (
-				0333218421B950D1005D524F /* Entities */,
 				0333217F21B94C7E005D524F /* Communs */,
 				0333217C21B94BE1005D524F /* UpComingMovieList */,
 				0333216E21B93BA8005D524F /* Communs */,
