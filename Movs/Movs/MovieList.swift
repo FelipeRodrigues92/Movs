@@ -1,5 +1,5 @@
 //
-//  AppConstants.swift
+//  MovieList.swift
 //  Movs
 //
 //  Created by Felipe Rodrigues Silva on 06/12/18.
@@ -8,5 +8,6 @@
 
 import Foundation
 
-let API_UPCOMING_MOVIE_LIST : String = "/movie/upcoming"
-let API_GENRE_LIST : String = "/genre/movie/list"
+struct MovieList : Decodable{
+    let results : [Movie]
+}
