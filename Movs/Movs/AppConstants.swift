@@ -10,3 +10,4 @@ import Foundation
 
 let API_UPCOMING_MOVIE_LIST : String = "/movie/upcoming"
 let API_GENRE_LIST : String = "/genre/movie/list"
+let UPCOMING_MOVIECOLLECTION_CELL = "UpComingMovieCell"

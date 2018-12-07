@@ -30,7 +30,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         let window = UIWindow(frame: UIScreen.main.bounds)
         
-        window.rootViewController = ViewController()
+        window.rootViewController = UpComingMovieViewController()
         self.window = window
         
         window.makeKeyAndVisible()
