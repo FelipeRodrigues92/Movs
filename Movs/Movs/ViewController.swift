@@ -13,12 +13,15 @@ class ViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         self.view.backgroundColor = UIColor.red
-        let movies = GenreMoyaGateway()// UpComingMovieListMoyaGateway()
-        movies.fecthGenres() { [weak self] result in
-            guard let strongSelf = self else {return}
-            
-            print(result)
-        }
+//        let movies = GenreMoyaGateway()// UpComingMovieListMoyaGateway()
+//        movies.fecthGenres() { [weak self] result in
+//            guard let strongSelf = self else {return}
+//
+//           // print(result)
+//        }
+        
+        let collection = UpComingMovieCollectionView()
+        
         // Do any additional setup after loading the view, typically from a nib.
     }
 
