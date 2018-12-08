@@ -34,3 +34,10 @@ class MovieDetailViewController : ViewController{
     }
     
 }
+
+extension MovieDetailViewController : MovieDetailBusinessLogic{
+    func setMovie(movie: Movie) {
+    }
+    
+    
+}
