@@ -6,6 +6,6 @@
 //  Copyright © 2018 Felipe Rodrigues Silva. All rights reserved.
 //
 
-protocol MovieDetailFeedView  {
+protocol MovieDetailFeedView : class {
     func feedMovieDetailView(with viewModel: MovieDetailModel)
 }

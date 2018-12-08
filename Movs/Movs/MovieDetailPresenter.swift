@@ -8,12 +8,15 @@
 
 import UIKit
 
-class MovieDetailPresenter : MovieDetailBusinessLogic{
- //   weak var viewController :
+class MovieDetailPresenter : MovieDetailPresentationLogic{
     
-    func setMovie(movie: Movie) {
-        
+    weak var viewController : MovieDetailFeedView?
+    
+    func presentMovieDetailResult(with movie: Movie) {
+        let movieDetailModel = MovieDetailModel(movie: movie)
+        if let viewController = self.viewController {
+            viewController.feedMovieDetailView(with: movieDetailModel)
+        }
     }
-    
     
 }

@@ -11,10 +11,17 @@ import UIKit
 class MovieDetailInteractor: MovieDetailBusinessLogic{
     
     var movie: Movie?
- //   var presenter : 
+    var presenter : MovieDetailPresentationLogic?
+    
+    
     
     func setMovie(movie: Movie) {
         self.movie = movie
+        if let presenter = self.presenter {
+            presenter.presentMovieDetailResult(with: movie)
+        }else{
+            
+        }
     }
     
     
