@@ -15,13 +15,14 @@ class MovieDetailViewController : ViewController{
         
         return movieDetailView
     }()
- //   var movieToDetail : Movie
     
-//    init(movie: Movie){
-//        movieToDetail = movie
-//        super.init(nibName: nil, bundle: nil)
-//        self.view.addSubview(movieDetailView)
-//    }
+    var movieToDetail : Movie?
+    
+    init(movie: Movie){
+        movieToDetail = movie
+        super.init(nibName: nil, bundle: nil)
+        self.view.addSubview(movieDetailView)
+    }
     
     init(){
         super.init(nibName: nil, bundle: nil)
