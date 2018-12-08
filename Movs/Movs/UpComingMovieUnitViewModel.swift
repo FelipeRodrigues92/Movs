@@ -19,5 +19,4 @@ struct UpComingMovieUnitViewModel {
         posterImage = movie.posterPath
         releaseDate = movie.releaseDate.toString(dateFormat: MOVIE_DATE_FORMATTER)
     }
-    
 }

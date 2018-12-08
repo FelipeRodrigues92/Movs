@@ -7,6 +7,6 @@
 //
 
 import Foundation
-protocol MovieListDataStore {
+protocol UpComingMovieListDataStore {
     var movie: Movie? { get set }
 }

@@ -17,7 +17,8 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
         return collectionViewLayout
     }()
     
-    var items: [Movie] = []
+    var items: [UpComingMovieUnitViewModel] = []
+    var interactor : UpComingMovieBusinessLogic? 
     
     lazy var collectionView : UICollectionView = {
         
@@ -29,19 +30,46 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
         return movieCollectionView
     }()
     
+    override init(nibName nibNameOrNil: String?, bundle nibBundleOrNil: Bundle?)
+    {
+        super.init(nibName: nibNameOrNil, bundle: nibBundleOrNil)
+        setup()
+    }
+    
+    required init?(coder aDecoder: NSCoder)
+    {
+        super.init(coder: aDecoder)
+        setup()
+    }
+    
     override func viewDidLoad() {
        // self.a
         self.view.addSubview(collectionView)
+        interactor?.fecthUpComingMovies(for: 01)
         
-        let movies = UpComingMovieListMoyaGateway()
-        movies.fecthUpComingMovies(page: 01) { [weak self] result in
-            guard let strongSelf = self else {return}
-            if case let .success(movies) = result {
-                strongSelf.items = movies
-                strongSelf.collectionView.reloadData()
-                print(strongSelf.items.count)
-            } else {/*do nothing*/}
-        }
+//        let movies = UpComingMovieListMoyaGateway()
+//        movies.fecthUpComingMovies(page: 01) { [weak self] result in
+//            guard let strongSelf = self else {return}
+//            if case let .success(movies) = result {
+//                strongSelf.items = movies
+//                strongSelf.collectionView.reloadData()
+//                print(strongSelf.items.count)
+//            } else {/*do nothing*/}
+//        }
+    }
+    
+    private func setup()
+    {
+        let viewController = self
+        let interactor = UpComingMovieInteractor()
+        let presenter = UpComingMovieListPresenter()
+     //   let router = TestRouter()
+        viewController.interactor = interactor
+     //   viewController.router = router
+        interactor.presenter = presenter
+        presenter.viewController = viewController
+//        router.viewController = viewController
+//        router.dataStore = interactor
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -53,7 +81,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
         
         let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath) as! UpComingMovieCell
         upComingCell.backgroundColor = .gray
-        upComingCell.uploadView(with: UpComingMovieUnitViewModel.init(movie: items[indexPath.row]))
+        upComingCell.uploadView(with: items[indexPath.row])
         return upComingCell
         
     }
@@ -61,4 +89,13 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
         
     }
+}
+
+extension UpComingMovieViewController : UpComingUpMovieFeedViews{
+    func feedMovieListArray(with moviesModel: [UpComingMovieUnitViewModel]) {
+        self.items.append(contentsOf: moviesModel)
+        self.collectionView.reloadData()
+    }
+    
+
 }
