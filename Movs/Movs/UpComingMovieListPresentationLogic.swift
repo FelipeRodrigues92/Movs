@@ -8,5 +8,5 @@
 
 
 protocol UpComingMovieListPresentationLogic {
-    func presentFetchResults(movies: [Movie])
+    func presentUpCmoingMoviesResults(movies: [Movie])
 }

@@ -25,9 +25,9 @@ final class UpComingMovieListMoyaGateway : UpComingMovieListGateway{
     
     func fecthUpComingMovies(page: Int, _ completion: @escaping (Result<[Movie]>) -> ()) {
         
-        provider.requestDecodable(target: UpComingMovieTarget.upComingMovieList(page), decoder: jsonDecoder) { (result : Result<MovieList>) in
-            
+        provider.requestDecodable(target: UpComingMovieTarget.upComingMovieList(page: page), decoder: jsonDecoder) { (result : Result<MovieList>) in
             let result = result.map { movieList in movieList.results}
+             print(result,"passou aqui")
             completion(result)
         }
         

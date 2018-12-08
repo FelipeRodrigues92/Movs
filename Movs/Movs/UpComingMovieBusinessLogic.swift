@@ -8,4 +8,5 @@
 
 protocol UpComingMovieBusinessLogic{
     func fecthUpComingMovies(for page: Int)
+    func setMovie(with movie: Int)
 }

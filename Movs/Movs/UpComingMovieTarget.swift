@@ -10,7 +10,7 @@ import Foundation
 import Moya
 
 enum UpComingMovieTarget{
-    case upComingMovieList(Int)
+    case upComingMovieList(page: Int)
     
 }
 extension UpComingMovieTarget: TargetType{
@@ -42,7 +42,10 @@ extension UpComingMovieTarget: TargetType{
     }
     
     var task: Task{
-        return .requestParameters(parameters: ["api_key": APISettings.key], encoding: URLEncoding.queryString)
+        switch self {
+        case .upComingMovieList(let page):
+            return .requestParameters(parameters: ["api_key": APISettings.key, "page" : page], encoding: URLEncoding.queryString)
+        }
     }
     
     var headers: [String : String]? {

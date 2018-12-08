@@ -8,12 +8,14 @@
 import Foundation
 
 class UpComingMovieListRouter : UpComingMovieListRoutingLogic, UpComingMovieListPassingData{
+    
     var dataStore: UpComingMovieListDataStore?
     
-    weak var viewCotroller: UpComingMovieViewController?
+    weak var viewController: UpComingMovieViewController?
     
     func routeToMovieDetail() {
-        if let movie = dataStore?.movie, let upComingMovieListViewController = viewCotroller {
+        
+        if let movie = dataStore?.movie, let upComingMovieListViewController = viewController {
             let movieDetailViewController = MovieDetailViewController(movie: movie)
             upComingMovieListViewController.show(movieDetailViewController,sender: nil)
         }

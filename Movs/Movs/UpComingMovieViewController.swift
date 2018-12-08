@@ -18,7 +18,9 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     }()
     
     var items: [UpComingMovieUnitViewModel] = []
-    var interactor : UpComingMovieBusinessLogic? 
+    var interactor : UpComingMovieBusinessLogic?
+    var router : (UpComingMovieListRoutingLogic & UpComingMovieListPassingData)?
+    var page : Int = 1
     
     lazy var collectionView : UICollectionView = {
         
@@ -45,7 +47,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     override func viewDidLoad() {
        // self.a
         self.view.addSubview(collectionView)
-        interactor?.fecthUpComingMovies(for: 01)
+        interactor?.fecthUpComingMovies(for: page)
         
 //        let movies = UpComingMovieListMoyaGateway()
 //        movies.fecthUpComingMovies(page: 01) { [weak self] result in
@@ -63,13 +65,13 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
         let viewController = self
         let interactor = UpComingMovieInteractor()
         let presenter = UpComingMovieListPresenter()
-     //   let router = TestRouter()
+        let router = UpComingMovieListRouter()
         viewController.interactor = interactor
-     //   viewController.router = router
+        viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
-//        router.viewController = viewController
-//        router.dataStore = interactor
+        router.viewController = viewController
+        router.dataStore = interactor
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -87,7 +89,8 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
-        
+        interactor?.setMovie(with: indexPath.row)
+        router?.routeToMovieDetail()
     }
 }
 

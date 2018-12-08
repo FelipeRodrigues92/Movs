@@ -22,6 +22,11 @@
 		031562FE21BBEEC900284621 /* UpComingMovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562FD21BBEEC900284621 /* UpComingMovieListPresenter.swift */; };
 		0315630021BC04A800284621 /* UpComingUpMovieFeedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562FF21BC04A800284621 /* UpComingUpMovieFeedViews.swift */; };
 		0315630221BC0B8F00284621 /* UpComingMovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630121BC0B8F00284621 /* UpComingMovieListRouter.swift */; };
+		0315630421BC35F500284621 /* MovieDetaiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630321BC35F500284621 /* MovieDetaiInteractor.swift */; };
+		0315630621BC363500284621 /* MovieDetailBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630521BC363500284621 /* MovieDetailBusinessLogic.swift */; };
+		0315630821BC389A00284621 /* MovieDetailPresentationLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630721BC389A00284621 /* MovieDetailPresentationLogic.swift */; };
+		0315630A21BC398900284621 /* MovieDetailPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630921BC398900284621 /* MovieDetailPresenter.swift */; };
+		0315630C21BC3B0300284621 /* MovieDetailFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630B21BC3B0300284621 /* MovieDetailFeedView.swift */; };
 		0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333213F21B8AD1E005D524F /* AppDelegate.swift */; };
 		0333214221B8AD1E005D524F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333214121B8AD1E005D524F /* ViewController.swift */; };
 		0333214721B8AD1F005D524F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0333214621B8AD1F005D524F /* Assets.xcassets */; };
@@ -87,6 +92,11 @@
 		031562FD21BBEEC900284621 /* UpComingMovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieListPresenter.swift; sourceTree = "<group>"; };
 		031562FF21BC04A800284621 /* UpComingUpMovieFeedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingUpMovieFeedViews.swift; sourceTree = "<group>"; };
 		0315630121BC0B8F00284621 /* UpComingMovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingMovieListRouter.swift; sourceTree = "<group>"; };
+		0315630321BC35F500284621 /* MovieDetaiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetaiInteractor.swift; sourceTree = "<group>"; };
+		0315630521BC363500284621 /* MovieDetailBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailBusinessLogic.swift; sourceTree = "<group>"; };
+		0315630721BC389A00284621 /* MovieDetailPresentationLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresentationLogic.swift; sourceTree = "<group>"; };
+		0315630921BC398900284621 /* MovieDetailPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailPresenter.swift; sourceTree = "<group>"; };
+		0315630B21BC3B0300284621 /* MovieDetailFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFeedView.swift; sourceTree = "<group>"; };
 		0333213C21B8AD1E005D524F /* Movs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0333213F21B8AD1E005D524F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0333214121B8AD1E005D524F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -179,6 +189,8 @@
 		031562E521BB782500284621 /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
+				0315630721BC389A00284621 /* MovieDetailPresentationLogic.swift */,
+				0315630921BC398900284621 /* MovieDetailPresenter.swift */,
 			);
 			name = Presenter;
 			sourceTree = "<group>";
@@ -186,6 +198,8 @@
 		031562E621BB782D00284621 /* Interactor */ = {
 			isa = PBXGroup;
 			children = (
+				0315630321BC35F500284621 /* MovieDetaiInteractor.swift */,
+				0315630521BC363500284621 /* MovieDetailBusinessLogic.swift */,
 			);
 			name = Interactor;
 			sourceTree = "<group>";
@@ -194,6 +208,7 @@
 			isa = PBXGroup;
 			children = (
 				031562E921BB789000284621 /* MovieDetailViewController.swift */,
+				0315630B21BC3B0300284621 /* MovieDetailFeedView.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -715,9 +730,11 @@
 				031562FC21BBEE4700284621 /* UpComingMovieListPresentationLogic.swift in Sources */,
 				031562E221BB559600284621 /* Date+Extensions.swift in Sources */,
 				031562FE21BBEEC900284621 /* UpComingMovieListPresenter.swift in Sources */,
+				0315630C21BC3B0300284621 /* MovieDetailFeedView.swift in Sources */,
 				031562F821BBEB8B00284621 /* UpComingMovieInteractor.swift in Sources */,
 				031562F421BB8D8D00284621 /* UpComingMovieListDataStore.swift in Sources */,
 				0333219721B9E4E1005D524F /* GenreHelper.swift in Sources */,
+				0315630821BC389A00284621 /* MovieDetailPresentationLogic.swift in Sources */,
 				0333214221B8AD1E005D524F /* ViewController.swift in Sources */,
 				0333218321B95040005D524F /* UpComingMovieListMoyaGateway.swift in Sources */,
 				0333218621B9512A005D524F /* Movie.swift in Sources */,
@@ -737,11 +754,14 @@
 				0315630221BC0B8F00284621 /* UpComingMovieListRouter.swift in Sources */,
 				0333219521B9AB6E005D524F /* GenreList.swift in Sources */,
 				033321AE21BB2065005D524F /* UpComingMovieUnitView.swift in Sources */,
+				0315630A21BC398900284621 /* MovieDetailPresenter.swift in Sources */,
 				031562FA21BBEBB200284621 /* UpComingMovieBusinessLogic.swift in Sources */,
+				0315630621BC363500284621 /* MovieDetailBusinessLogic.swift in Sources */,
 				0333218921B958B5005D524F /* DefaultView.swift in Sources */,
 				0333219921B9E98F005D524F /* GenreMoyaGateway.swift in Sources */,
 				0333218F21B994F9005D524F /* MovieList.swift in Sources */,
 				0333218121B94C8E005D524F /* Result.swift in Sources */,
+				0315630421BC35F500284621 /* MovieDetaiInteractor.swift in Sources */,
 				0315630021BC04A800284621 /* UpComingUpMovieFeedViews.swift in Sources */,
 				0333217B21B94A94005D524F /* ViewCode.swift in Sources */,
 				031562EA21BB789000284621 /* MovieDetailViewController.swift in Sources */,
