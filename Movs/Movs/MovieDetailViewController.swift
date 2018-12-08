@@ -10,12 +10,22 @@ import UIKit
 
 class MovieDetailViewController : ViewController{
     
-    var movieToDetail : Movie
-    
-    init(movie: Movie){
-        movieToDetail = movie
-        super.init(nibName: nil, bundle: nil)
+    lazy var movieDetailView : UIView = {
+        let movieDetailView = MovieDetailView(frame: self.view.bounds)
         
+        return movieDetailView
+    }()
+ //   var movieToDetail : Movie
+    
+//    init(movie: Movie){
+//        movieToDetail = movie
+//        super.init(nibName: nil, bundle: nil)
+//        self.view.addSubview(movieDetailView)
+//    }
+    
+    init(){
+        super.init(nibName: nil, bundle: nil)
+        self.view.addSubview(movieDetailView)
     }
     
     required init?(coder aDecoder: NSCoder) {
