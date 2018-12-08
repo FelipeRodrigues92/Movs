@@ -64,8 +64,6 @@ extension UpComingMovieUnitView : ViewCode{
         
         self.posterImageView.snp.makeConstraints { make in
             make.top.equalToSuperview()
-            make.left.equalToSuperview().offset(20)
-            make.right.equalToSuperview().inset(20)
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.height.equalToSuperview().multipliedBy(0.7)
@@ -82,6 +80,9 @@ extension UpComingMovieUnitView : ViewCode{
     func setupAdditionalConfigurations() {
         self.titleLabel.text = "oiisdjcosdv"
         self.dataLabel.text = "fsjdfijs"
+        
+        print(APISettings.postImageURL(path: "/pEFRzXtLmxYNjGd0XqJDHPDFKB2.jpg"))
+        
     }
     
     

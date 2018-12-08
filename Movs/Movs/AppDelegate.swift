@@ -20,10 +20,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         GenreMoyaGateway().fecthGenres { (result: Result<[Genre]>) in
             if case let .success(genres) = result {
                 GenreHelper.genreList = genres
-                
-                for genre in GenreHelper.genreList{
-                    print(genre)
-                }
             } else {/*do nothing*/}
 
         }
