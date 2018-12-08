@@ -8,6 +8,7 @@
 
 import UIKit
 import SnapKit
+import Kingfisher
 
 class UpComingMovieUnitView : UIView{
     
@@ -67,6 +68,8 @@ extension UpComingMovieUnitView : ViewCode{
             make.leading.equalToSuperview()
             make.trailing.equalToSuperview()
             make.height.equalToSuperview().multipliedBy(0.7)
+            make.width.equalToSuperview()
+            
         }
 
         self.viewConteiner.snp.makeConstraints { make in
@@ -81,8 +84,7 @@ extension UpComingMovieUnitView : ViewCode{
         self.titleLabel.text = "oiisdjcosdv"
         self.dataLabel.text = "fsjdfijs"
         
-        print(APISettings.postImageURL(path: "/pEFRzXtLmxYNjGd0XqJDHPDFKB2.jpg"))
-        
+        ImageKingFetcherGateway().imageFecth(with: APISettings.postImageURL(path: "/pEFRzXtLmxYNjGd0XqJDHPDFKB2.jpg"),to: self.posterImageView)
     }
     
     

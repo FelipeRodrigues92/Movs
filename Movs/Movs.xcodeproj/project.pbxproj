@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		031562DE21BB475800284621 /* ImageFetcher.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562DD21BB475800284621 /* ImageFetcher.swift */; };
+		031562E021BB481900284621 /* ImageKingFetcherGateway.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562DF21BB481900284621 /* ImageKingFetcherGateway.swift */; };
 		0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333213F21B8AD1E005D524F /* AppDelegate.swift */; };
 		0333214221B8AD1E005D524F /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333214121B8AD1E005D524F /* ViewController.swift */; };
 		0333214721B8AD1F005D524F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0333214621B8AD1F005D524F /* Assets.xcassets */; };
@@ -57,6 +59,8 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		031562DD21BB475800284621 /* ImageFetcher.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageFetcher.swift; sourceTree = "<group>"; };
+		031562DF21BB481900284621 /* ImageKingFetcherGateway.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageKingFetcherGateway.swift; sourceTree = "<group>"; };
 		0333213C21B8AD1E005D524F /* Movs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0333213F21B8AD1E005D524F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0333214121B8AD1E005D524F /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -253,6 +257,8 @@
 			children = (
 				0333219021B9A73F005D524F /* GenreGateway.swift */,
 				0333219821B9E98F005D524F /* GenreMoyaGateway.swift */,
+				031562DD21BB475800284621 /* ImageFetcher.swift */,
+				031562DF21BB481900284621 /* ImageKingFetcherGateway.swift */,
 			);
 			name = Communs;
 			sourceTree = "<group>";
@@ -632,7 +638,9 @@
 				0333218621B9512A005D524F /* Movie.swift in Sources */,
 				0333217321B94132005D524F /* AppConstants.swift in Sources */,
 				033321B221BB30D0005D524F /* UpComingMovieUnitViewModel.swift in Sources */,
+				031562DE21BB475800284621 /* ImageFetcher.swift in Sources */,
 				0333219121B9A73F005D524F /* GenreGateway.swift in Sources */,
+				031562E021BB481900284621 /* ImageKingFetcherGateway.swift in Sources */,
 				033321AA21BAE925005D524F /* UpComingMovieViewController.swift in Sources */,
 				0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */,
 				0333218D21B989E4005D524F /* Moya+requestDecodable.swift in Sources */,
