@@ -81,10 +81,6 @@ extension UpComingMovieUnitView : ViewCode{
     }
     
     func setupAdditionalConfigurations() {
-        self.titleLabel.text = "oiisdjcosdv"
-        self.dataLabel.text = "fsjdfijs"
-        
-        ImageKingFetcherGateway().imageFecth(with: APISettings.postImageURL(path: "/pEFRzXtLmxYNjGd0XqJDHPDFKB2.jpg"),to: self.posterImageView)
     }
     
     

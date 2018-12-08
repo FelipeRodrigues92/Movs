@@ -17,7 +17,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
         return collectionViewLayout
     }()
     
-    var items: [Movie] = [Movie]()
+    var items: [Movie] = []
     
     lazy var collectionView : UICollectionView = {
         
@@ -32,20 +32,33 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     override func viewDidLoad() {
        // self.a
         self.view.addSubview(collectionView)
+        
+        let movies = UpComingMovieListMoyaGateway()
+        movies.fecthUpComingMovies(page: 01) { [weak self] result in
+            guard let strongSelf = self else {return}
+            if case let .success(movies) = result {
+                strongSelf.items = movies
+                strongSelf.collectionView.reloadData()
+                print(strongSelf.items.count)
+            } else {/*do nothing*/}
+        }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        return 10
+        return items.count
     }
     
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath)
+        let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath) as! UpComingMovieCell
         upComingCell.backgroundColor = .gray
+        upComingCell.uploadView(with: UpComingMovieUnitViewModel.init(movie: items[indexPath.row]))
         return upComingCell
         
     }
     
-    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+    }
 }
