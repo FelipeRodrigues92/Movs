@@ -23,7 +23,6 @@
 		0315630C21BC3B0300284621 /* MovieDetailFeedView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630B21BC3B0300284621 /* MovieDetailFeedView.swift */; };
 		0315631921BCD4DA00284621 /* UpcomingMovieListDataStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315631821BCD4DA00284621 /* UpcomingMovieListDataStore.swift */; };
 		0315631B21BCD50500284621 /* UpcomingMovieListRouter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315631A21BCD50500284621 /* UpcomingMovieListRouter.swift */; };
-		0315631F21BCD56C00284621 /* UpcomingMovieCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315631E21BCD56C00284621 /* UpcomingMovieCell.swift */; };
 		0315632321BCD64D00284621 /* UpcomingMovieListDataPassing.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315632221BCD64D00284621 /* UpcomingMovieListDataPassing.swift */; };
 		0315632521BCD6D700284621 /* UpcomingMovieListPresenterLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315632421BCD6D700284621 /* UpcomingMovieListPresenterLogic.swift */; };
 		0315632721BCDFCE00284621 /* UpcomingMovieCellUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315632621BCDFCE00284621 /* UpcomingMovieCellUnitView.swift */; };
@@ -33,6 +32,7 @@
 		0315633521BD7B8900284621 /* UpcomingMovieUnitCellViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315633421BD7B8900284621 /* UpcomingMovieUnitCellViewModel.swift */; };
 		0315633721BD7C5F00284621 /* UpcomingMovieListBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315633621BD7C5F00284621 /* UpcomingMovieListBusinessLogic.swift */; };
 		0315633921BD831300284621 /* UpcomingMovieListInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315633821BD831300284621 /* UpcomingMovieListInteractor.swift */; };
+		0315633B21BD85AF00284621 /* UpcomingMovieListCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315633A21BD85AF00284621 /* UpcomingMovieListCell.swift */; };
 		0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333213F21B8AD1E005D524F /* AppDelegate.swift */; };
 		0333214721B8AD1F005D524F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0333214621B8AD1F005D524F /* Assets.xcassets */; };
 		0333214A21B8AD1F005D524F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0333214821B8AD1F005D524F /* LaunchScreen.storyboard */; };
@@ -94,7 +94,6 @@
 		0315630B21BC3B0300284621 /* MovieDetailFeedView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailFeedView.swift; sourceTree = "<group>"; };
 		0315631821BCD4DA00284621 /* UpcomingMovieListDataStore.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListDataStore.swift; sourceTree = "<group>"; };
 		0315631A21BCD50500284621 /* UpcomingMovieListRouter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListRouter.swift; sourceTree = "<group>"; };
-		0315631E21BCD56C00284621 /* UpcomingMovieCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieCell.swift; sourceTree = "<group>"; };
 		0315632221BCD64D00284621 /* UpcomingMovieListDataPassing.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListDataPassing.swift; sourceTree = "<group>"; };
 		0315632421BCD6D700284621 /* UpcomingMovieListPresenterLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListPresenterLogic.swift; sourceTree = "<group>"; };
 		0315632621BCDFCE00284621 /* UpcomingMovieCellUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieCellUnitView.swift; sourceTree = "<group>"; };
@@ -104,6 +103,7 @@
 		0315633421BD7B8900284621 /* UpcomingMovieUnitCellViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieUnitCellViewModel.swift; sourceTree = "<group>"; };
 		0315633621BD7C5F00284621 /* UpcomingMovieListBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListBusinessLogic.swift; sourceTree = "<group>"; };
 		0315633821BD831300284621 /* UpcomingMovieListInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListInteractor.swift; sourceTree = "<group>"; };
+		0315633A21BD85AF00284621 /* UpcomingMovieListCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListCell.swift; sourceTree = "<group>"; };
 		0333213C21B8AD1E005D524F /* Movs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0333213F21B8AD1E005D524F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0333214621B8AD1F005D524F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -427,8 +427,8 @@
 		0333219F21BA000C005D524F /* Views */ = {
 			isa = PBXGroup;
 			children = (
-				0315631E21BCD56C00284621 /* UpcomingMovieCell.swift */,
 				0315632621BCDFCE00284621 /* UpcomingMovieCellUnitView.swift */,
+				0315633A21BD85AF00284621 /* UpcomingMovieListCell.swift */,
 			);
 			name = Views;
 			sourceTree = "<group>";
@@ -765,6 +765,7 @@
 				0333219521B9AB6E005D524F /* GenreList.swift in Sources */,
 				0315630A21BC398900284621 /* MovieDetailPresenter.swift in Sources */,
 				0315630621BC363500284621 /* MovieDetailBusinessLogic.swift in Sources */,
+				0315633B21BD85AF00284621 /* UpcomingMovieListCell.swift in Sources */,
 				0333218921B958B5005D524F /* DefaultView.swift in Sources */,
 				0315633721BD7C5F00284621 /* UpcomingMovieListBusinessLogic.swift in Sources */,
 				0333219921B9E98F005D524F /* GenreMoyaGateway.swift in Sources */,
@@ -773,7 +774,6 @@
 				0315633521BD7B8900284621 /* UpcomingMovieUnitCellViewModel.swift in Sources */,
 				0315630421BC35F500284621 /* MovieDetaiInteractor.swift in Sources */,
 				0315631B21BCD50500284621 /* UpcomingMovieListRouter.swift in Sources */,
-				0315631F21BCD56C00284621 /* UpcomingMovieCell.swift in Sources */,
 				0315630021BC04A800284621 /* UpComingUpMovieFeedViews.swift in Sources */,
 				0315632721BCDFCE00284621 /* UpcomingMovieCellUnitView.swift in Sources */,
 				0333217B21B94A94005D524F /* ViewCode.swift in Sources */,

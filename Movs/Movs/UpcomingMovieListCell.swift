@@ -1,5 +1,4 @@
-//
-//  UpComingMovieCell.swift
+//  UpcomingMovieListCell.swift
 //  Movs
 //
 //  Created by Felipe Rodrigues Silva on 06/12/18.
@@ -10,7 +9,7 @@ import SnapKit
 import UIKit
 import Kingfisher
 
-class UpcomingMovieCell : UICollectionViewCell{
+class UpcomingMovieListCell : UICollectionViewCell{
     
     lazy var UpComingMovieCellView : UpcomingMovieCellUnitView = {
         let cellView =  UpcomingMovieCellUnitView()
@@ -26,7 +25,7 @@ class UpcomingMovieCell : UICollectionViewCell{
         fatalError("init(coder:) has not been implemented")
     }
     
-    func uploadView(with movieCell: UpcomingMovieUnitViewModel){
+    func uploadView(with movieCell: UpcomingMovieUnitCellViewModel){
         let resource = APISettings.postImageURL(path: movieCell.posterImage)
         self.UpComingMovieCellView.dataLabel.text = movieCell.releaseDate
         self.UpComingMovieCellView.titleLabel.text = movieCell.title
@@ -35,7 +34,7 @@ class UpcomingMovieCell : UICollectionViewCell{
     
 }
 
-extension UpcomingMovieCell: ViewCode{
+extension UpcomingMovieListCell: ViewCode{
     func buildViewHierarchy() {
         self.addSubview(UpComingMovieCellView)
     }
@@ -52,4 +51,5 @@ extension UpcomingMovieCell: ViewCode{
     
     
 }
+
 

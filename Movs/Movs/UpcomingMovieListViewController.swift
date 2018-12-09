@@ -25,7 +25,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
     lazy var collectionView : UICollectionView = {
         
         let movieCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        movieCollectionView.register(UpcomingMovieCell.self, forCellWithReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL)
+        movieCollectionView.register(UpcomingMovieListCell.self, forCellWithReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL)
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
         movieCollectionView.backgroundColor = .white
@@ -76,7 +76,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath) as! UpcomingMovieCell
+        let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath) as! UpcomingMovieListCell
         upComingCell.uploadView(with: items[indexPath.row])
         return upComingCell
         
