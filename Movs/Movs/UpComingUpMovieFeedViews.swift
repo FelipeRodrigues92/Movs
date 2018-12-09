@@ -7,5 +7,5 @@
 //
 
 protocol UpComingUpMovieFeedViews : class{
-    func feedMovieListArray(with moviesModel: [UpcomingMovieUnitViewModel])
+    func feedMovieListArray(with moviesModel: [UpcomingMovieUnitCellViewModel])
 }

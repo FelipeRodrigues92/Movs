@@ -17,8 +17,8 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
         return collectionViewLayout
     }()
     
-    var items: [UpcomingMovieUnitViewModel] = []
-    var interactor : UpcomingMovieBusinessLogic?
+    var items: [UpcomingMovieUnitCellViewModel] = []
+    var interactor : UpcomingMovieListBusinessLogic?
     var router : (UpcomingMovieListRoutingLogic & UpcomingMovieListDataPassing)?
     var page : Int = 1
     
@@ -51,7 +51,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
     private func setup()
     {
         let viewController = self
-        let interactor = UpcomingMovieInteractor()
+        let interactor = UpcomingMovieListInteractor()
         let presenter = UpcomingMovieListPresenter()
         let router = UpcomingMovieListRouter()
         viewController.interactor = interactor
@@ -89,7 +89,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
 }
 
 extension UpcomingMovieListViewController : UpComingUpMovieFeedViews{
-    func feedMovieListArray(with moviesModel: [UpcomingMovieUnitViewModel]) {
+    func feedMovieListArray(with moviesModel: [UpcomingMovieUnitCellViewModel]) {
         self.items.append(contentsOf: moviesModel)
         self.collectionView.reloadData()
     }

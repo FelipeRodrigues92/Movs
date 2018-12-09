@@ -1,14 +1,14 @@
 //
-//  UpComingMovieInteractor.swift
+//  UpcomingMovieListInteractor.swift
 //  Movs
 //
-//  Created by Felipe Rodrigues Silva on 08/12/18.
+//  Created by Felipe Rodrigues Silva on 09/12/18.
 //  Copyright © 2018 Felipe Rodrigues Silva. All rights reserved.
 //
 
 import UIKit
 
-class UpcomingMovieInteractor: UpcomingMovieBusinessLogic, UpcomingMovieListDataStore{
+class UpcomingMovieListInteractor: UpcomingMovieListBusinessLogic, UpcomingMovieListDataStore{
     
     var movie: Movie?
     
@@ -30,7 +30,7 @@ class UpcomingMovieInteractor: UpcomingMovieBusinessLogic, UpcomingMovieListData
     }
     
     func setMovie(with index: Int){
-         self.movie = moviesArray[index]
+        self.movie = moviesArray[index]
     }
     
     private func addNewMovies(movies : [Movie], newPage: Int){

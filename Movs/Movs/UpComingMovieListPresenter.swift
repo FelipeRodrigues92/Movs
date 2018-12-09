@@ -13,9 +13,9 @@ class UpcomingMovieListPresenter : UpcomingMovieListPresenterLogic{
     weak var viewController : UpComingUpMovieFeedViews?
     
     func presentUpcomingMoviesResults(movies: [Movie]){
-        var movieUnitArray: [UpcomingMovieUnitViewModel] = []
+        var movieUnitArray: [UpcomingMovieUnitCellViewModel] = []
         for movie in movies {
-            movieUnitArray.append(UpcomingMovieUnitViewModel.init(movie: movie))
+            movieUnitArray.append(UpcomingMovieUnitCellViewModel.init(movie: movie))
         }
         viewController?.feedMovieListArray(with: movieUnitArray)
     }
