@@ -15,7 +15,7 @@ class MovieDetailView : UIView{
         let stackView = UIStackView()
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
-        stackView.spacing = 8
+        stackView.spacing = 2
         return stackView
     }()
     
@@ -44,16 +44,15 @@ class MovieDetailView : UIView{
     
     lazy var genresLabel : UILabel = {
         let genresLabel = UILabel()
-        genresLabel.font = UIFont.boldSystemFont(ofSize: 12)
+        genresLabel.font = UIFont.boldSystemFont(ofSize: 14)
         genresLabel.translatesAutoresizingMaskIntoConstraints = false
         return genresLabel
     }()
     
-    lazy var overviewLabel : UILabel = {
-        let overview = UILabel()
-        overview.font = UIFont.boldSystemFont(ofSize: 12)
-        overview.translatesAutoresizingMaskIntoConstraints = false
-        return overview
+    lazy var overviewText : UITextView = {
+        let view = UITextView(frame: .zero)
+        view.font = UIFont.systemFont(ofSize: 14)
+        return view
     }()
 
     override init(frame: CGRect = .zero) {
@@ -65,7 +64,7 @@ class MovieDetailView : UIView{
         let resource = APISettings.postImageURL(path: movieModel.posterImagePath)
         self.postImage.kf.setImage(with: resource)
         self.dataLabel.text = movieModel.releaseDate
-        self.overviewLabel.text = movieModel.overview
+        self.overviewText.text = movieModel.overview
         self.titleLabel.text = movieModel.title
         self.genresLabel.text = GenreHelper.getGenreName(with: movieModel.genreIds) as String
         
@@ -78,28 +77,31 @@ class MovieDetailView : UIView{
 
 extension MovieDetailView : ViewCode{
     func buildViewHierarchy() {
-        self.addSubview(titleLabel)
         self.addSubview(postImage)
+        stackView.addArrangedSubview(titleLabel)
         stackView.addArrangedSubview(dataLabel)
         stackView.addArrangedSubview(genresLabel)
-        stackView.addArrangedSubview(overviewLabel)
         self.addSubview(stackView)
+        self.addSubview(overviewText)
     }
     
     func setupConstraints() {
-        titleLabel.snp.makeConstraints { make in
-            make.top.left.right.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.1)
-        }
+
         postImage.snp.makeConstraints { make in
-            make.top.equalTo(titleLabel.snp.bottom)
-            make.left.right.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.6)
+            make.left.right.equalToSuperview().inset(20)
+            make.top.equalToSuperview().inset(85)
+            make.height.equalTo(450)
         }
         stackView.snp.makeConstraints { make in
             make.top.equalTo(postImage.snp.bottom)
             make.left.right.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.5)
+            make.centerY.equalToSuperview()
+            make.height.equalTo(160)
+        }
+        overviewText.snp.makeConstraints { (make) in
+            make.top.equalTo(stackView.snp.bottom).offset(10)
+            make.left.right.equalToSuperview().inset(10)
+            make.bottom.equalToSuperview()
         }
 
     }
@@ -108,7 +110,6 @@ extension MovieDetailView : ViewCode{
         stackView.backgroundColor = .white
         titleLabel.backgroundColor = .white
         postImage.backgroundColor = .white
-        dataLabel.textColor = .white
         
     }
     

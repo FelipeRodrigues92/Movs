@@ -8,11 +8,11 @@
 
 import UIKit
 
-class UpcomingMovieInteractor: UpComingMovieBusinessLogic, UpcomingMovieListDataStore{
+class UpcomingMovieInteractor: UpcomingMovieBusinessLogic, UpcomingMovieListDataStore{
     
     var movie: Movie?
     
-    var presenter: UpcomingMovieListPresentationLogic?
+    var presenter: UpcomingMovieListPresenterLogic?
     let moviesWorker = UpComingMovieListMoyaGateway()
     
     var page : Int = 0

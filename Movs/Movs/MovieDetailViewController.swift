@@ -8,7 +8,7 @@
 
 import UIKit
 
-class MovieDetailViewController : ViewController{
+class MovieDetailViewController : UIViewController{
     
     var interactor : MovieDetailBusinessLogic?
     
@@ -44,7 +44,15 @@ class MovieDetailViewController : ViewController{
         presenter.viewController = viewController
      //   router.viewController = viewController
       //  router.dataStore = interactor
+        setupViewController()
     }
+    
+    private func setupViewController() {
+        self.view.backgroundColor = UIColor(displayP3Red: 43, green: 44, blue: 47, alpha: 1)
+        title = NAVEGATION_MOVIE_DETAIL_TITLE
+        tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: NAVEGATION_UPCOMING_IMAGE), tag: 0)
+    }
+    
     private func callIteractor(movie: Movie){
         guard let interactor = self.interactor else{return}
         interactor.setMovie(movie: movie)

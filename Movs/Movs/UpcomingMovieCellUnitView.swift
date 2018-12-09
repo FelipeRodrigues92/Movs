@@ -1,5 +1,5 @@
 //
-//  upComingMovieUnitView.swift
+//  UpcomingMovieCellUnitView.swift
 //  Movs
 //
 //  Created by Felipe Rodrigues Silva on 07/12/18.
@@ -10,13 +10,13 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class UpcomingMovieUnitView : UIView{
+class UpcomingMovieCellUnitView : UIView{
     
     lazy var viewConteiner : UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
         stackView.distribution = .fillEqually
-        stackView.spacing = 8
+        stackView.spacing = 2
         return stackView
     }()
     lazy var posterImageView: UIImageView = {
@@ -29,14 +29,18 @@ class UpcomingMovieUnitView : UIView{
     
     lazy var titleLabel : UILabel = {
         let titleLabel = UILabel()
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        titleLabel.numberOfLines = 0
+        titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         return titleLabel
     }()
     
     lazy var dataLabel : UILabel = {
         let dataLabel = UILabel()
-        dataLabel.font = UIFont.boldSystemFont(ofSize: 20)
+        dataLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        dataLabel.numberOfLines = 0
+        dataLabel.textAlignment = .center
         dataLabel.translatesAutoresizingMaskIntoConstraints = false
         return dataLabel
     }()
@@ -52,7 +56,7 @@ class UpcomingMovieUnitView : UIView{
     
 }
 
-extension UpcomingMovieUnitView : ViewCode{
+extension UpcomingMovieCellUnitView : ViewCode{
     func buildViewHierarchy() {
         viewConteiner.addArrangedSubview(posterImageView)
         viewConteiner.addArrangedSubview(titleLabel)
@@ -64,14 +68,11 @@ extension UpcomingMovieUnitView : ViewCode{
     func setupConstraints() {
         
         self.posterImageView.snp.makeConstraints { make in
-            make.top.equalToSuperview()
-            make.leading.equalToSuperview()
-            make.trailing.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.7)
-            make.width.equalToSuperview()
+            make.left.top.right.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.8)
             
         }
-
+        
         self.viewConteiner.snp.makeConstraints { make in
             make.bottom.equalToSuperview()
             make.left.equalToSuperview().offset(20)

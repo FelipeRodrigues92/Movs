@@ -8,7 +8,7 @@
 
 import UIKit
 
-class UpcomingMovieListPresenter : UpcomingMovieListPresentationLogic{
+class UpcomingMovieListPresenter : UpcomingMovieListPresenterLogic{
     
     weak var viewController : UpComingUpMovieFeedViews?
     

@@ -25,11 +25,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         }
         
         let window = UIWindow(frame: UIScreen.main.bounds)
-        let tabBarController = UITabBarController()
+        let tabBarController = TabBarController()
         
-        let upComingMovieListController = UpcomingMovieViewController()
+        let upComingMovieListController = UpComingMovieViewController()
         
-        let moviesNavigationController = UINavigationController(rootViewController: upComingMovieListController)
+        let moviesNavigationController = NavigationController(rootViewController: upComingMovieListController)
         
         tabBarController.viewControllers = [moviesNavigationController]
         
