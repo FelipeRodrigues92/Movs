@@ -20,7 +20,7 @@ class MovieDetailInteractor: MovieDetailBusinessLogic{
         if let presenter = self.presenter {
             presenter.presentMovieDetailResult(with: movie)
         }else{
-            
+          /**DoNothing*/
         }
     }
     

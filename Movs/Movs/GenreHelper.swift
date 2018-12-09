@@ -20,7 +20,11 @@ struct GenreHelper{
                 genreNames.append(contentsOf: " " + genre.name + ",")
             }
         }
-        genreNames.removeLast()
+        if genreNames.count > 0{
+            genreNames.removeLast()
+        }else{
+            genreNames.append("Unknown")
+        }
         return genreNames
     }
 }

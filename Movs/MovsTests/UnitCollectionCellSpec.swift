@@ -6,4 +6,18 @@
 //  Copyright © 2018 Felipe Rodrigues Silva. All rights reserved.
 //
 
-import Foundation
+import Quick
+import Nimble
+
+@testable import Movs
+
+class APISetingsSpec : QuickSpec{
+    override func spec() {
+        describe("MovieDetailView Spec") {
+            context("when request a TMDBAPI image URL"){
+                
+            }
+        }
+        
+    }
+}
