@@ -27,7 +27,6 @@ final class UpComingMovieListMoyaGateway : UpComingMovieListGateway{
         
         provider.requestDecodable(target: UpComingMovieTarget.upComingMovieList(page: page), decoder: jsonDecoder) { (result : Result<MovieList>) in
             let result = result.map { movieList in movieList.results}
-             print(result,"passou aqui")
             completion(result)
         }
         

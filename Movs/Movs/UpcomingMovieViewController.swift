@@ -19,7 +19,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     
     var items: [UpComingMovieUnitViewModel] = []
     var interactor : UpComingMovieBusinessLogic?
-    var router : (UpComingMovieListRoutingLogic & UpComingMovieListPassingData)?
+    var router : (UpcomingMovieListRoutingLogic & UpcomingMovieListPassingData)?
     var page : Int = 1
     
     lazy var collectionView : UICollectionView = {
@@ -45,33 +45,28 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     }
     
     override func viewDidLoad() {
-       // self.a
         self.view.addSubview(collectionView)
         interactor?.fecthUpComingMovies(for: page)
-        
-//        let movies = UpComingMovieListMoyaGateway()
-//        movies.fecthUpComingMovies(page: 01) { [weak self] result in
-//            guard let strongSelf = self else {return}
-//            if case let .success(movies) = result {
-//                strongSelf.items = movies
-//                strongSelf.collectionView.reloadData()
-//                print(strongSelf.items.count)
-//            } else {/*do nothing*/}
-//        }
     }
     
     private func setup()
     {
         let viewController = self
         let interactor = UpComingMovieInteractor()
-        let presenter = UpComingMovieListPresenter()
-        let router = UpComingMovieListRouter()
+        let presenter = UpcomingMovieListPresenter()
+        let router = UpcomingMovieListRouter()
         viewController.interactor = interactor
         viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
+        setupViewController()
+    }
+    
+    private func setupViewController() {
+        title = NAVEGATION_UPCOMING_TITLE
+        tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: NAVEGATION_UPCOMING_IMAGE), tag: 0)
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {

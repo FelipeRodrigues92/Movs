@@ -13,13 +13,14 @@ struct GenreHelper{
     
     static var genreList = [Genre]()
     
-    static func getGenreName(with ids:[Int]) -> NSString{
-        let names = NSString()
+    static func getGenreName(with ids:[Int]) -> String{
+        var genreNames = String()
         for genre in genreList {
             if(ids.contains(genre.id)){
-                names.appending("" + genre.name)
+                genreNames.append(contentsOf: " " + genre.name + ",")
             }
         }
-        return names
+        genreNames.removeLast()
+        return genreNames
     }
 }

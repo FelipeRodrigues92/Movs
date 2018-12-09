@@ -10,7 +10,7 @@ import UIKit
 import SnapKit
 import Kingfisher
 
-class UpComingMovieUnitView : UIView{
+class UpcomingMovieUnitView : UIView{
     
     lazy var viewConteiner : UIStackView = {
         let stackView = UIStackView(frame: .zero)
@@ -52,7 +52,7 @@ class UpComingMovieUnitView : UIView{
     
 }
 
-extension UpComingMovieUnitView : ViewCode{
+extension UpcomingMovieUnitView : ViewCode{
     func buildViewHierarchy() {
         viewConteiner.addArrangedSubview(posterImageView)
         viewConteiner.addArrangedSubview(titleLabel)

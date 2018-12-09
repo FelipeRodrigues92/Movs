@@ -99,19 +99,16 @@ extension MovieDetailView : ViewCode{
         stackView.snp.makeConstraints { make in
             make.top.equalTo(postImage.snp.bottom)
             make.left.right.equalToSuperview()
-            make.height.equalToSuperview().multipliedBy(0.3)
+            make.height.equalToSuperview().multipliedBy(0.5)
         }
-        
+
     }
     
     func setupAdditionalConfigurations() {
-        stackView.backgroundColor = .black
-        titleLabel.backgroundColor = .blue
-        postImage.backgroundColor = .red
-        
-        dataLabel.text = "asdajsknfsdjnf"
-        genresLabel.text = "ajfnwiefiwewew"
-        overviewLabel.text = "asjnweoihnvioew"
+        stackView.backgroundColor = .white
+        titleLabel.backgroundColor = .white
+        postImage.backgroundColor = .white
+        dataLabel.textColor = .white
         
     }
     

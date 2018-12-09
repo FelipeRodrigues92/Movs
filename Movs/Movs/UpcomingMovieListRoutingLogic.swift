@@ -6,6 +6,6 @@
 //  Copyright © 2018 Felipe Rodrigues Silva. All rights reserved.
 //
 
-protocol UpComingMovieListRoutingLogic {
+protocol UpcomingMovieListRoutingLogic {
     func routeToMovieDetail()
 }

@@ -1,5 +1,5 @@
 //
-//  MoveListPassingData.swift
+//  UpcomingMovieListDataPassing.swift
 //  Movs
 //
 //  Created by Felipe Rodrigues Silva on 08/12/18.
@@ -8,6 +8,6 @@
 
 import Foundation
 
-protocol UpComingMovieListPassingData {
-    var dataStore: UpComingMovieListDataStore? { get }
+protocol UpcomingMovieListDataPassing {
+    var dataStore: UpcomingMovieListDataStore? { get }
 }
