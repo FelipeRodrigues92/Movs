@@ -13,22 +13,22 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     lazy var layout: UICollectionViewFlowLayout = {
     let collectionViewLayout = UICollectionViewFlowLayout()
     collectionViewLayout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
-    collectionViewLayout.itemSize = CGSize(width: 150, height: 150)
+    collectionViewLayout.itemSize = CGSize(width: 170, height: 242)
         return collectionViewLayout
     }()
     
-    var items: [UpComingMovieUnitViewModel] = []
-    var interactor : UpComingMovieBusinessLogic?
-    var router : (UpcomingMovieListRoutingLogic & UpcomingMovieListPassingData)?
+    var items: [UpcomingMovieUnitViewModel] = []
+    var interactor : UpcomingMovieBusinessLogic?
+    var router : (UpcomingMovieListRoutingLogic & UpcomingMovieListDataPassing)?
     var page : Int = 1
     
     lazy var collectionView : UICollectionView = {
         
         let movieCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
-        movieCollectionView.register(UpComingMovieCell.self, forCellWithReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL)
+        movieCollectionView.register(UpcomingMovieCell.self, forCellWithReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL)
         movieCollectionView.delegate = self
         movieCollectionView.dataSource = self
-        movieCollectionView.backgroundColor = .blue
+        movieCollectionView.backgroundColor = .white
         return movieCollectionView
     }()
     
@@ -52,7 +52,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     private func setup()
     {
         let viewController = self
-        let interactor = UpComingMovieInteractor()
+        let interactor = UpcomingMovieInteractor()
         let presenter = UpcomingMovieListPresenter()
         let router = UpcomingMovieListRouter()
         viewController.interactor = interactor
@@ -66,6 +66,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     
     private func setupViewController() {
         title = NAVEGATION_UPCOMING_TITLE
+        //UIColor(displayP3Red: 43, green: 44, blue: 47, alpha: 1)
         tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: NAVEGATION_UPCOMING_IMAGE), tag: 0)
     }
     
@@ -76,8 +77,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
-        let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath) as! UpComingMovieCell
-        upComingCell.backgroundColor = .gray
+        let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath) as! UpcomingMovieCell
         upComingCell.uploadView(with: items[indexPath.row])
         return upComingCell
         
@@ -90,7 +90,7 @@ class UpComingMovieViewController: UIViewController, UICollectionViewDelegate, U
 }
 
 extension UpComingMovieViewController : UpComingUpMovieFeedViews{
-    func feedMovieListArray(with moviesModel: [UpComingMovieUnitViewModel]) {
+    func feedMovieListArray(with moviesModel: [UpcomingMovieUnitViewModel]) {
         self.items.append(contentsOf: moviesModel)
         self.collectionView.reloadData()
     }
