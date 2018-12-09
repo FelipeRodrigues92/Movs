@@ -27,7 +27,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         let window = UIWindow(frame: UIScreen.main.bounds)
         let tabBarController = TabBarController()
         
-        let upComingMovieListController = UpComingMovieViewController()
+        let upComingMovieListController = UpcomingMovieListViewController()
         
         let moviesNavigationController = NavigationController(rootViewController: upComingMovieListController)
         

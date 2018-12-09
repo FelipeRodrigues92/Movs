@@ -12,7 +12,7 @@ class UpcomingMovieListRouter : UpcomingMovieListRoutingLogic, UpcomingMovieList
     
     var dataStore: UpcomingMovieListDataStore?
     
-    weak var viewController: UpComingMovieViewController?
+    weak var viewController: UpcomingMovieListViewController?
     
     func routeToMovieDetail() {
         

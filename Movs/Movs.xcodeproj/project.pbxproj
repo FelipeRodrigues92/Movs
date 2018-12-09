@@ -32,6 +32,7 @@
 		0315632721BCDFCE00284621 /* UpcomingMovieCellUnitView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315632621BCDFCE00284621 /* UpcomingMovieCellUnitView.swift */; };
 		0315632921BCECB700284621 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315632821BCECB700284621 /* TabBarController.swift */; };
 		0315632B21BCED8B00284621 /* NavigationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315632A21BCED8B00284621 /* NavigationController.swift */; };
+		0315632F21BCF2CA00284621 /* UpcomingMovieListViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315632E21BCF2CA00284621 /* UpcomingMovieListViewController.swift */; };
 		0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333213F21B8AD1E005D524F /* AppDelegate.swift */; };
 		0333214721B8AD1F005D524F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0333214621B8AD1F005D524F /* Assets.xcassets */; };
 		0333214A21B8AD1F005D524F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0333214821B8AD1F005D524F /* LaunchScreen.storyboard */; };
@@ -102,6 +103,7 @@
 		0315632621BCDFCE00284621 /* UpcomingMovieCellUnitView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieCellUnitView.swift; sourceTree = "<group>"; };
 		0315632821BCECB700284621 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		0315632A21BCED8B00284621 /* NavigationController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = NavigationController.swift; sourceTree = "<group>"; };
+		0315632E21BCF2CA00284621 /* UpcomingMovieListViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListViewController.swift; sourceTree = "<group>"; };
 		0333213C21B8AD1E005D524F /* Movs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0333213F21B8AD1E005D524F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0333214621B8AD1F005D524F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -435,6 +437,7 @@
 			isa = PBXGroup;
 			children = (
 				031562FF21BC04A800284621 /* UpComingUpMovieFeedViews.swift */,
+				0315632E21BCF2CA00284621 /* UpcomingMovieListViewController.swift */,
 			);
 			name = ViewController;
 			sourceTree = "<group>";
@@ -736,6 +739,7 @@
 				0333217E21B94C26005D524F /* UpComingMovieListGateway.swift in Sources */,
 				031562EE21BB7FCA00284621 /* MovieDetailView.swift in Sources */,
 				031562E221BB559600284621 /* Date+Extensions.swift in Sources */,
+				0315632F21BCF2CA00284621 /* UpcomingMovieListViewController.swift in Sources */,
 				031562FE21BBEEC900284621 /* UpcomingMovieListPresenter.swift in Sources */,
 				0315632321BCD64D00284621 /* UpcomingMovieListDataPassing.swift in Sources */,
 				0315632521BCD6D700284621 /* UpcomingMovieListPresenterLogic.swift in Sources */,
