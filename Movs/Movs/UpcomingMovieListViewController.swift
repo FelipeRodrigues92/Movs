@@ -45,7 +45,6 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
     }
     
     override func viewDidLoad() {
-        self.view.addSubview(collectionView)
         interactor?.fecthUpComingMovies(for: page)
     }
     
@@ -61,7 +60,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
         presenter.viewController = viewController
         router.viewController = viewController
         router.dataStore = interactor
-        setupViewController()
+        setupView()
     }
     
     private func setupViewController() {
@@ -94,6 +93,21 @@ extension UpcomingMovieListViewController : UpComingUpMovieFeedViews{
         self.items.append(contentsOf: moviesModel)
         self.collectionView.reloadData()
     }
+}
+extension UpcomingMovieListViewController : ViewCode{
+    func buildViewHierarchy() {
+        self.view.addSubview(collectionView)
+    }
     
+    func setupConstraints() {}
+    
+    func setupAdditionalConfigurations() {
+        self.view.backgroundColor = .black
+        self.collectionView.backgroundColor = UIColor(displayP3Red: 18/255, green: 18/255, blue: 18/255, alpha: 1)
+        
+        title = NAVEGATION_UPCOMING_TITLE
+        //UIColor(displayP3Red: 43/255, green: 44/255, blue: 47/255, alpha: 1)
+        tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: NAVEGATION_UPCOMING_IMAGE), tag: 0)
+    }
     
 }

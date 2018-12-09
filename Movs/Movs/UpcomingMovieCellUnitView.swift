@@ -29,7 +29,7 @@ class UpcomingMovieCellUnitView : UIView{
     
     lazy var titleLabel : UILabel = {
         let titleLabel = UILabel()
-        titleLabel.font = UIFont.boldSystemFont(ofSize: 14)
+        titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
         titleLabel.numberOfLines = 0
         titleLabel.textAlignment = .center
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
@@ -82,6 +82,8 @@ extension UpcomingMovieCellUnitView : ViewCode{
     }
     
     func setupAdditionalConfigurations() {
+        titleLabel.textColor = .white
+        dataLabel.textColor = .white
     }
     
     
