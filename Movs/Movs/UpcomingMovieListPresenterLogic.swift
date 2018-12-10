@@ -8,6 +8,12 @@
 
 
 protocol UpcomingMovieListPresenterLogic {
+    /**
+     Call back the viewController passing corrects datas(arrray of Movie).
+     
+     - parameters:
+     - movies: [Movie].
+     */
     func presentUpcomingMoviesResults(movies: [Movie])
 }
 

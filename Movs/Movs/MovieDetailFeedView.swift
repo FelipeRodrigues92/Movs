@@ -7,5 +7,11 @@
 //
 
 protocol MovieDetailFeedView : class {
+    /**
+     Feed MovieDetailView with MovieDetailModel datas.
+     
+     - parameters:
+     - viewModel: MovieDetailModel.
+     */
     func feedMovieDetailView(with viewModel: MovieDetailModel)
 }

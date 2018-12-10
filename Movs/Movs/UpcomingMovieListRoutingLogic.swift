@@ -7,5 +7,9 @@
 //
 
 protocol UpcomingMovieListRoutingLogic {
+    
+    /**
+     Call MovieDetail view controller.
+     */
     func routeToMovieDetail()
 }

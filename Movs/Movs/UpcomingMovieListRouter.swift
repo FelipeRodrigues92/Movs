@@ -12,6 +12,7 @@ class UpcomingMovieListRouter : UpcomingMovieListRoutingLogic, UpcomingMovieList
     
     var dataStore: UpcomingMovieListDataStore?
     
+    //ViewController of UpComingMovieListViewController. It's weak for ARC don't count more one reference
     weak var viewController: UpcomingMovieListViewController?
     
     func routeToMovieDetail() {

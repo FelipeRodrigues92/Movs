@@ -7,5 +7,11 @@
 //
 
 protocol MovieDetailPresentationLogic{
+    /**
+     Call back the viewController passing corrects datas(Movie).
+     
+     - parameters:
+     - movie: Movie.
+     */
     func presentMovieDetailResult(with movie: Movie)
 }

@@ -14,6 +14,12 @@
     let releaseDate : String
     let posterImage : String
     
+    /**
+     Initiate a data conteiner of UpcomingMovieUnitCellViewModel type.
+     
+     - parameters:
+     - movie: Movie.
+     */
     init(movie: Movie){
         title = movie.title
         posterImage = movie.posterPath

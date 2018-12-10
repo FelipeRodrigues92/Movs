@@ -10,18 +10,22 @@ import UIKit
 
 class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegate, UICollectionViewDataSource{
     
+   ///Set configuration for layout of some UICollectionView
     lazy var layout: UICollectionViewFlowLayout = {
         let collectionViewLayout = UICollectionViewFlowLayout()
         collectionViewLayout.sectionInset = UIEdgeInsets(top: 20, left: 10, bottom: 10, right: 10)
         collectionViewLayout.itemSize = CGSize(width: 170, height: 242)
         return collectionViewLayout
     }()
-    
+    ///Items are empty now, but will be a array of movies cells.
     var items: [UpcomingMovieUnitCellViewModel] = []
+    
+    ///THis viewController interactor
     var interactor : UpcomingMovieListBusinessLogic?
     var router : (UpcomingMovieListRoutingLogic & UpcomingMovieListDataPassing)?
     var page : Int = 1
     
+    ///CollectionView is be setting
     lazy var collectionView : UICollectionView = {
         
         let movieCollectionView = UICollectionView(frame: self.view.frame, collectionViewLayout: layout)
@@ -45,9 +49,12 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
     }
     
     override func viewDidLoad() {
+        ///Call inteiractor function to populate this movie's controller view after pass over the VIP cicle
         interactor?.fecthUpComingMovies(for: page)
     }
-    
+    /**
+     Setup UpcomingMovieListViewController protocols.
+     */
     private func setup()
     {
         let viewController = self
@@ -71,6 +78,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         
         let upComingCell = collectionView.dequeueReusableCell(withReuseIdentifier: UPCOMING_MOVIECOLLECTION_CELL, for: indexPath) as! UpcomingMovieListCell
+        ///Tranformationg collectionView's cells to UpcomingMovieListCell
         upComingCell.uploadView(with: items[indexPath.row])
         return upComingCell
         

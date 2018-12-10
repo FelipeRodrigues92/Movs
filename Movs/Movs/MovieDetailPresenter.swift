@@ -10,6 +10,7 @@ import UIKit
 
 class MovieDetailPresenter : MovieDetailPresentationLogic{
     
+    ///ViewController of MovieDetailViewController. It's weak for ARC don't count more one reference
     weak var viewController : MovieDetailFeedView?
     
     func presentMovieDetailResult(with movie: Movie) {

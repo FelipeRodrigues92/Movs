@@ -10,7 +10,9 @@ import UIKit
 import Kingfisher
 
 class UpcomingMovieListCell : UICollectionViewCell{
-    
+    /**
+     The view that this cell will follow.
+     */
     lazy var upComingMovieCellView : UpcomingMovieCellUnitView = {
         let cellView =  UpcomingMovieCellUnitView()
         return cellView

@@ -9,10 +9,19 @@
 import Foundation
 
 struct GenreHelper{
+    
+    ///Private init, so can't exist a instance
     private init(){}
     
+    /// Array for store all Genres types while app is on
     static var genreList = [Genre]()
     
+    /**
+    Get names of geners by ids.
+     
+     - parameters:
+     - ids: Array of int [Int]
+     */
     static func getGenreName(with ids:[Int]) -> String{
         var genreNames = String()
         for genre in genreList {

@@ -9,17 +9,31 @@
 import UIKit
 
 class MovieDetailViewController : UIViewController{
-    
+    /**
+     MovieDetailViewController interactor.
+     */
     var interactor : MovieDetailBusinessLogic?
     
+    /**
+    Setup inicial confgurations of MovieDetailView.
+     */
     lazy var movieDetailView : MovieDetailView = {
         let movieDetailView = MovieDetailView(frame: self.view.bounds)
         
         return movieDetailView
     }()
     
+    /**
+     MovieDetailViewController movie.
+     */
     var movieToDetail : Movie?
     
+    /**
+    MovieDetailViewController init.
+     
+     - parameters:
+     - movie: Movie.
+     */
     init(movie: Movie){
         movieToDetail = movie
         super.init(nibName: nil, bundle: nil)
@@ -32,6 +46,9 @@ class MovieDetailViewController : UIViewController{
         fatalError("init(coder:) has not been implemented")
     }
     
+    /**
+     Setup MovieDetailViewController protocols.
+     */
     private func setup()
     {
         let viewController = self
@@ -43,12 +60,20 @@ class MovieDetailViewController : UIViewController{
         setupViewController()
     }
     
+    /**
+     Setup MovieDetailViewController protocols.
+     */
     private func setupViewController() {
         self.view.backgroundColor = UIColor(displayP3Red: 43, green: 44, blue: 47, alpha: 1)
         title = NAVEGATION_MOVIE_DETAIL_TITLE
         tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: NAVEGATION_UPCOMING_IMAGE), tag: 0)
     }
-    
+    /**
+     Set MovieDetailViewController interactor movie value.
+     
+     - parameters:
+     - movie: Movie.
+     */
     private func callIteractor(movie: Movie){
         guard let interactor = self.interactor else{return}
         interactor.setMovie(movie: movie)

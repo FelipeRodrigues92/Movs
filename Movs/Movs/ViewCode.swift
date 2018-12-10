@@ -9,13 +9,26 @@
 import Foundation
 
 protocol ViewCode {
+    /**
+     For add childrens classes to parente in order.
+     */
     func buildViewHierarchy()
+    /**
+     For set the view constrainsts.
+     */
     func setupConstraints()
+    /**
+     For set adicional configurations.
+     */
     func setupAdditionalConfigurations()
+    /**
+     Call the others fuctions of this procotol in correct order.
+     */
     func setupView()
 }
 extension ViewCode{
     func setupView(){
+
         buildViewHierarchy()
         setupConstraints()
         setupAdditionalConfigurations()

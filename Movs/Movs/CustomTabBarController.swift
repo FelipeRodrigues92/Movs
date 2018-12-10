@@ -19,6 +19,9 @@ class CustomTabBarController : UITabBarController{
     required init?(coder aDecoder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
+    /**
+     Setup tabBar custom configurations.
+     */
     private func setupTabBar(){
         self.tabBar.barStyle = .blackOpaque
         self.tabBar.isTranslucent = false

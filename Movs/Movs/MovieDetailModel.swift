@@ -15,6 +15,12 @@ struct MovieDetailModel {
     let releaseDate : String
     let posterImagePath : String
     
+    /**
+     Initiate a data conteiner of MovieDetailModel type.
+     
+     - parameters:
+     - movie: Movie.
+     */
     init(movie: Movie){
         overview = movie.overview
         title = movie.title

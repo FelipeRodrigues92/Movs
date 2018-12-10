@@ -11,7 +11,9 @@ import SnapKit
 import Kingfisher
 
 class UpcomingMovieCellUnitView : UIView{
-    
+    /**
+     StackView for this view labels.
+     */
     lazy var viewConteiner : UIStackView = {
         let stackView = UIStackView(frame: .zero)
         stackView.axis = .vertical
@@ -19,6 +21,9 @@ class UpcomingMovieCellUnitView : UIView{
         stackView.spacing = 2
         return stackView
     }()
+    /**
+     ImageView for poster.
+     */
     lazy var posterImageView: UIImageView = {
         let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -26,7 +31,9 @@ class UpcomingMovieCellUnitView : UIView{
         imageView.clipsToBounds = true
         return imageView
     }()
-    
+    /**
+     This view's title label for the movie.
+     */
     lazy var titleLabel : UILabel = {
         let titleLabel = UILabel()
         titleLabel.font = UIFont.boldSystemFont(ofSize: 16)
@@ -35,7 +42,9 @@ class UpcomingMovieCellUnitView : UIView{
         titleLabel.translatesAutoresizingMaskIntoConstraints = false
         return titleLabel
     }()
-    
+    /**
+     This view's data label for the movie.
+     */
     lazy var dataLabel : UILabel = {
         let dataLabel = UILabel()
         dataLabel.font = UIFont.boldSystemFont(ofSize: 14)

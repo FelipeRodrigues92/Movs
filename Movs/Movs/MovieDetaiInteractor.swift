@@ -11,9 +11,8 @@ import UIKit
 class MovieDetailInteractor: MovieDetailBusinessLogic{
     
     var movie: Movie?
+    
     var presenter : MovieDetailPresentationLogic?
-    
-    
     
     func setMovie(movie: Movie) {
         self.movie = movie

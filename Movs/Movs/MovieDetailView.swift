@@ -10,7 +10,9 @@ import UIKit
 import SnapKit
 
 class MovieDetailView : UIView{
-    
+    /**
+     StackView for this view labels.
+     */
     lazy var stackView : UIStackView = {
         let stackView = UIStackView()
         stackView.axis = .vertical
@@ -18,7 +20,9 @@ class MovieDetailView : UIView{
         stackView.spacing = 0
         return stackView
     }()
-    
+    /**
+     ImageView for poster.
+     */
     lazy var postImage: UIImageView = {
        let imageView = UIImageView()
         imageView.contentMode = .scaleAspectFit
@@ -26,7 +30,9 @@ class MovieDetailView : UIView{
         imageView.clipsToBounds = true
         return imageView
     }()
-    
+    /**
+     This view's title label for the movie.
+     */
     lazy var titleLabel : UILabel = {
         let title = UILabel()
         title.font = UIFont.boldSystemFont(ofSize: 20)
@@ -37,7 +43,9 @@ class MovieDetailView : UIView{
         
         return title
     }()
-    
+    /**
+     This view's data label for the movie data realese.
+     */
     lazy var dataLabel : UILabel = {
         let dataLabel = UILabel()
         dataLabel.font = UIFont.boldSystemFont(ofSize: 14)
@@ -48,7 +56,9 @@ class MovieDetailView : UIView{
         return dataLabel
     }()
     
-    
+    /**
+     This view's genre label for the movie.
+     */
     lazy var genresLabel : UILabel = {
         let genresLabel = UILabel()
         genresLabel.font = UIFont.boldSystemFont(ofSize: 14)
@@ -59,6 +69,9 @@ class MovieDetailView : UIView{
         return genresLabel
     }()
     
+    /**
+     This view's overview label for the movie.
+     */
     lazy var overviewText : UITextView = {
         let view = UITextView(frame: .zero)
         view.font = UIFont.systemFont(ofSize: 14)
@@ -70,7 +83,12 @@ class MovieDetailView : UIView{
         super.init(frame: frame)
         setupView()
     }
-    
+    /**
+     Set the labels and post imageView informations.
+     
+     - parameters:
+     - movieModel: MovieDetailModel.
+     */
     func uploadView(with movieModel: MovieDetailModel){
         let resource = APISettings.postImageURL(path: movieModel.posterImagePath)
         self.postImage.kf.setImage(with: resource)
@@ -110,9 +128,8 @@ extension MovieDetailView : ViewCode{
         }
         overviewText.snp.makeConstraints { (make) in
             make.top.equalTo(stackView.snp.bottom)
-            make.left.right.equalToSuperview().inset(20)
-            make.height.equalToSuperview().multipliedBy(0.3)
-            make.bottom.equalToSuperview()
+            make.left.right.equalToSuperview()
+            make.height.equalToSuperview().multipliedBy(0.25)
         }
 
     }
