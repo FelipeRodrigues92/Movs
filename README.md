@@ -30,6 +30,7 @@ pod 'Moya', '~> 11.0'
 pod 'SnapKit'
   
 pod 'Kingfisher', '~> 4.0'
+
 target 'MovsTests' do
  inherit! :search_paths
     
