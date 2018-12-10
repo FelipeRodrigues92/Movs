@@ -59,7 +59,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
     {
         let viewController = self
         let interactor = UpcomingMovieListInteractor()
-        let presenter = UpcomingMovieListPresenter()
+        let presenter = UpcomingMoviePresenter()
         let router = UpcomingMovieListRouter()
         viewController.interactor = interactor
         viewController.router = router

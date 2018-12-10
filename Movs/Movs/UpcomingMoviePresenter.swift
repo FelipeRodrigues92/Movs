@@ -1,5 +1,5 @@
 //
-//  UpComingMovieListPresenter.swift
+//  UpcomingMoviePresenter.swift
 //  Movs
 //
 //  Created by Felipe Rodrigues Silva on 08/12/18.
@@ -8,8 +8,9 @@
 
 import UIKit
 
-class UpcomingMovieListPresenter : UpcomingMovieListPresenterLogic{
+class UpcomingMoviePresenter : UpcomingMovieListPresenterLogic{
     
+    //ViewController of UpComingMovieListViewController. It's weak for ARC don't count more one reference
     weak var viewController : UpComingUpMovieFeedViews?
     
     func presentUpcomingMoviesResults(movies: [Movie]){

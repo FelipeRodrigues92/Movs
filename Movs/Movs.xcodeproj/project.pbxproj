@@ -12,7 +12,6 @@
 		031562EC21BB7BE700284621 /* MovieDetailModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562EB21BB7BE700284621 /* MovieDetailModel.swift */; };
 		031562EE21BB7FCA00284621 /* MovieDetailView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562ED21BB7FCA00284621 /* MovieDetailView.swift */; };
 		031562F021BB8C1800284621 /* UpcomingMovieListRoutingLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562EF21BB8C1800284621 /* UpcomingMovieListRoutingLogic.swift */; };
-		031562FE21BBEEC900284621 /* UpcomingMovieListPresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562FD21BBEEC900284621 /* UpcomingMovieListPresenter.swift */; };
 		0315630021BC04A800284621 /* UpComingUpMovieFeedViews.swift in Sources */ = {isa = PBXBuildFile; fileRef = 031562FF21BC04A800284621 /* UpComingUpMovieFeedViews.swift */; };
 		0315630421BC35F500284621 /* MovieDetaiInteractor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630321BC35F500284621 /* MovieDetaiInteractor.swift */; };
 		0315630621BC363500284621 /* MovieDetailBusinessLogic.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315630521BC363500284621 /* MovieDetailBusinessLogic.swift */; };
@@ -40,6 +39,7 @@
 		0315636821BDE20E00284621 /* UpcomingMovieUnitCellViewModelSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315636621BDE1FB00284621 /* UpcomingMovieUnitCellViewModelSpec.swift */; };
 		0315636A21BDE38E00284621 /* UpcomingMovieListCellSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315636921BDE38E00284621 /* UpcomingMovieListCellSpec.swift */; };
 		0315636C21BDE5F800284621 /* UpcomingMovieListInteractorSpec.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315636B21BDE5F800284621 /* UpcomingMovieListInteractorSpec.swift */; };
+		0315637221BE24DA00284621 /* UpcomingMoviePresenter.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0315637121BE24DA00284621 /* UpcomingMoviePresenter.swift */; };
 		0333214021B8AD1E005D524F /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0333213F21B8AD1E005D524F /* AppDelegate.swift */; };
 		0333214721B8AD1F005D524F /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 0333214621B8AD1F005D524F /* Assets.xcassets */; };
 		0333214A21B8AD1F005D524F /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 0333214821B8AD1F005D524F /* LaunchScreen.storyboard */; };
@@ -86,7 +86,6 @@
 		031562EB21BB7BE700284621 /* MovieDetailModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailModel.swift; sourceTree = "<group>"; };
 		031562ED21BB7FCA00284621 /* MovieDetailView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailView.swift; sourceTree = "<group>"; };
 		031562EF21BB8C1800284621 /* UpcomingMovieListRoutingLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListRoutingLogic.swift; sourceTree = "<group>"; };
-		031562FD21BBEEC900284621 /* UpcomingMovieListPresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListPresenter.swift; sourceTree = "<group>"; };
 		031562FF21BC04A800284621 /* UpComingUpMovieFeedViews.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpComingUpMovieFeedViews.swift; sourceTree = "<group>"; };
 		0315630321BC35F500284621 /* MovieDetaiInteractor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetaiInteractor.swift; sourceTree = "<group>"; };
 		0315630521BC363500284621 /* MovieDetailBusinessLogic.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieDetailBusinessLogic.swift; sourceTree = "<group>"; };
@@ -114,6 +113,7 @@
 		0315636621BDE1FB00284621 /* UpcomingMovieUnitCellViewModelSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieUnitCellViewModelSpec.swift; sourceTree = "<group>"; };
 		0315636921BDE38E00284621 /* UpcomingMovieListCellSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListCellSpec.swift; sourceTree = "<group>"; };
 		0315636B21BDE5F800284621 /* UpcomingMovieListInteractorSpec.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMovieListInteractorSpec.swift; sourceTree = "<group>"; };
+		0315637121BE24DA00284621 /* UpcomingMoviePresenter.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UpcomingMoviePresenter.swift; sourceTree = "<group>"; };
 		0333213C21B8AD1E005D524F /* Movs.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Movs.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		0333213F21B8AD1E005D524F /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		0333214621B8AD1F005D524F /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
@@ -494,7 +494,7 @@
 		033321A321BA0065005D524F /* Presenter */ = {
 			isa = PBXGroup;
 			children = (
-				031562FD21BBEEC900284621 /* UpcomingMovieListPresenter.swift */,
+				0315637121BE24DA00284621 /* UpcomingMoviePresenter.swift */,
 				0315632421BCD6D700284621 /* UpcomingMovieListPresenterLogic.swift */,
 			);
 			name = Presenter;
@@ -780,7 +780,6 @@
 				031562EE21BB7FCA00284621 /* MovieDetailView.swift in Sources */,
 				031562E221BB559600284621 /* Date+Extensions.swift in Sources */,
 				0315632F21BCF2CA00284621 /* UpcomingMovieListViewController.swift in Sources */,
-				031562FE21BBEEC900284621 /* UpcomingMovieListPresenter.swift in Sources */,
 				0315632321BCD64D00284621 /* UpcomingMovieListDataPassing.swift in Sources */,
 				0315632521BCD6D700284621 /* UpcomingMovieListPresenterLogic.swift in Sources */,
 				0315630C21BC3B0300284621 /* MovieDetailFeedView.swift in Sources */,
@@ -803,6 +802,7 @@
 				0333219521B9AB6E005D524F /* GenreList.swift in Sources */,
 				0315630A21BC398900284621 /* MovieDetailPresenter.swift in Sources */,
 				0315630621BC363500284621 /* MovieDetailBusinessLogic.swift in Sources */,
+				0315637221BE24DA00284621 /* UpcomingMoviePresenter.swift in Sources */,
 				0315633B21BD85AF00284621 /* UpcomingMovieListCell.swift in Sources */,
 				0315633721BD7C5F00284621 /* UpcomingMovieListBusinessLogic.swift in Sources */,
 				0333219921B9E98F005D524F /* GenreMoyaGateway.swift in Sources */,
