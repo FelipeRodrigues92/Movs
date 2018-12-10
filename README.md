@@ -3,7 +3,7 @@
 
 Este é um divertido desafio proposto a mim e aceito com animação. Me foi solicitado uma aplicação que utilize a API do TMDB para a apresentar filmes a amantes de filmes.
 
-A aplicação no momento possui duas telas principais, uma Collection View com os filmes próximos de estrear e outra de com as informações mais detalhada.
+A aplicação no momento possui duas telas principais, uma Collection View com os filmes próximos de estrear e outra de com as informações mais detalhadas.
 
 Esse projeto foi executado seguindo fundamentos da Clean Swift, arquitetura VIP e também ViewCode, ou seja, tudo feito programaticamente. Além disso foram utilizado frameworks como o Alamofire Moya, SnapKit, Kingfisher, Quick  e Nimble.
 
