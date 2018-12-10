@@ -37,13 +37,9 @@ class MovieDetailViewController : UIViewController{
         let viewController = self
         let interactor = MovieDetailInteractor()
         let presenter = MovieDetailPresenter()
-     //   let router = Moviede()
         viewController.interactor = interactor
-       // viewController.router = router
         interactor.presenter = presenter
         presenter.viewController = viewController
-     //   router.viewController = viewController
-      //  router.dataStore = interactor
         setupViewController()
     }
     

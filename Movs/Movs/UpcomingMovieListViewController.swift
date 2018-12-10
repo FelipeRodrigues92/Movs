@@ -100,7 +100,6 @@ extension UpcomingMovieListViewController : ViewCode{
         self.collectionView.backgroundColor = UIColor(displayP3Red: 18/255, green: 18/255, blue: 18/255, alpha: 1)
         
         title = NAVEGATION_UPCOMING_TITLE
-        //UIColor(displayP3Red: 43/255, green: 44/255, blue: 47/255, alpha: 1)
         tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: NAVEGATION_UPCOMING_IMAGE), tag: 0)
     }
     

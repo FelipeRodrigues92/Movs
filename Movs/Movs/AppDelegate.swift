@@ -35,8 +35,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
         
         window.rootViewController = tabBarController
         
-      
-       //  window.rootViewController = MovieDetailViewController()
         self.window = window
         
         window.makeKeyAndVisible()
