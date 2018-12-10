@@ -280,6 +280,15 @@
 			path = UpcomingMovieList;
 			sourceTree = "<group>";
 		};
+		0315637021BE04E200284621 /* Misc */ = {
+			isa = PBXGroup;
+			children = (
+				0333213F21B8AD1E005D524F /* AppDelegate.swift */,
+				0333214821B8AD1F005D524F /* LaunchScreen.storyboard */,
+			);
+			name = Misc;
+			sourceTree = "<group>";
+		};
 		0333213321B8AD1E005D524F = {
 			isa = PBXGroup;
 			children = (
@@ -310,9 +319,8 @@
 				0333217121B940EB005D524F /* Constants */,
 				0333218421B950D1005D524F /* Models */,
 				0333216D21B9389B005D524F /* Workers */,
-				0333213F21B8AD1E005D524F /* AppDelegate.swift */,
+				0315637021BE04E200284621 /* Misc */,
 				0333214621B8AD1F005D524F /* Assets.xcassets */,
-				0333214821B8AD1F005D524F /* LaunchScreen.storyboard */,
 				0333214B21B8AD1F005D524F /* Info.plist */,
 			);
 			path = Movs;
