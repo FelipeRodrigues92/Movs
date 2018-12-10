@@ -11,7 +11,7 @@ Esse projeto foi executado seguindo fundamentos da Clean Swift, arquitetura VIP 
 # Instalação
 
 
-Este projeto pode ser aberto no Xcode. Caso alguma das framework perca a referência pode ser resolvido com comando “pod install” do diretório “Movs/“ em que se encontra o Podfile.
+Este projeto pode ser aberto no Xcode. Caso alguma das framework perca alguma referência pode ser resolvido com comando “pod install” do diretório “Movs/“ em que se encontra o Podfile.
 
 O PodFile está com seguinte configuração:
 
