@@ -62,13 +62,7 @@ class UpcomingMovieListViewController: UIViewController, UICollectionViewDelegat
         router.dataStore = interactor
         setupView()
     }
-    
-    private func setupViewController() {
-        title = NAVEGATION_UPCOMING_TITLE
-        //UIColor(displayP3Red: 43, green: 44, blue: 47, alpha: 1)
-        tabBarItem = UITabBarItem(title: self.title, image: UIImage(named: NAVEGATION_UPCOMING_IMAGE), tag: 0)
-    }
-    
+        
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         return items.count
     }

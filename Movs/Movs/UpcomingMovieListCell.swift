@@ -11,7 +11,7 @@ import Kingfisher
 
 class UpcomingMovieListCell : UICollectionViewCell{
     
-    lazy var UpComingMovieCellView : UpcomingMovieCellUnitView = {
+    lazy var upComingMovieCellView : UpcomingMovieCellUnitView = {
         let cellView =  UpcomingMovieCellUnitView()
         return cellView
     }()
@@ -27,20 +27,20 @@ class UpcomingMovieListCell : UICollectionViewCell{
     
     func uploadView(with movieCell: UpcomingMovieUnitCellViewModel){
         let resource = APISettings.postImageURL(path: movieCell.posterImage)
-        self.UpComingMovieCellView.dataLabel.text = movieCell.releaseDate
-        self.UpComingMovieCellView.titleLabel.text = movieCell.title
-        self.UpComingMovieCellView.posterImageView.kf.setImage(with:resource)
+        self.upComingMovieCellView.dataLabel.text = movieCell.releaseDate
+        self.upComingMovieCellView.titleLabel.text = movieCell.title
+        self.upComingMovieCellView.posterImageView.kf.setImage(with:resource)
     }
     
 }
 
 extension UpcomingMovieListCell: ViewCode{
     func buildViewHierarchy() {
-        self.addSubview(UpComingMovieCellView)
+        self.addSubview(upComingMovieCellView)
     }
     
     func setupConstraints() {
-        self.UpComingMovieCellView.snp.makeConstraints { make in
+        self.upComingMovieCellView.snp.makeConstraints { make in
             make.top.right.left.bottom.equalToSuperview()
         }
     }
