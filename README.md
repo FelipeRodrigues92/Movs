@@ -25,19 +25,18 @@ target 'Movs' do
 
   #Pods for Movs
   
-  pod 'Moya', '~> 11.0'
+pod 'Moya', '~> 11.0'
   
-  pod 'SnapKit'
+pod 'SnapKit'
   
-  pod 'Kingfisher', '~> 4.0'
+pod 'Kingfisher', '~> 4.0'
+target 'MovsTests' do
+ inherit! :search_paths
+    
+ pod 'Quick'
 
-
-  target 'MovsTests' do
-    inherit! :search_paths
+ pod 'Nimble'
     
-    pod 'Quick'
-    
-    pod 'Nimble'
-    
-  end
-end
+ end
+  
+ end
